@@ -1,0 +1,67 @@
+<nav>
+    <a routerLink="/">
+        <img src="favicon.ico" alt="">
+    </a>
+    <div>
+        <a class="nav-link" routerLink="/services" title="">Services</a>
+        <a class="nav-link" routerLink="/aboutus" title="">About us</a>
+        <a class="nav-link" routerLink="/privacy" title="">Privacy</a>
+        <a class="outlined-button" routerLink="/loginform/1" title="">Login</a>
+        <a class="filled-button" routerLink="/signup" title="">Sign up</a>
+    </div>
+</nav>
+<div class="login-forms">
+    <a class="anchor" routerLink="/loginform/1">Login 1</a>
+    <a class="anchor" routerLink="/loginform/2">Login 2</a>
+    <a class="anchor" routerLink="/loginform/3">Login 3</a>
+    <a class="anchor" routerLink="/loginform/4">Login 4</a>
+    <a class="anchor" routerLink="/loginform/5">Login 5</a>
+</div>
+
+<router-outlet></router-outlet>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #eee;
+    }
+
+    .anchor {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 30px;
+        color: blue;
+    }
+
+    nav > div {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .outlined-button {
+        border: 1px solid blue;
+        border-radius: 4px;
+        padding: 4px 12px;
+    }
+
+    .filled-button {
+        background-color: blue;
+        color: white;
+        border-radius: 4px;
+        padding: 4px 12px;
+    }
+    
+    .login-forms {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+</style>

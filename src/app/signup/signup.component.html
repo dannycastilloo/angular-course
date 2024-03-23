@@ -1,0 +1,51 @@
+<form action="" [formGroup]="usernameForm" (ngSubmit)="formSubmission()">
+    <label for="username">Username</label>
+    <input 
+        type="text" 
+        placeholder="Username"
+        required
+        name="username" 
+        id="username"
+        formControlName="username"
+    >
+    
+    <span sytle="color: red;" *ngIf="username && username.invalid && username.touched">Invalid</span>
+    <br>
+
+    <label for="email">Email</label>
+    <input 
+        type="email" 
+        placeholder="Email"
+        name="email" 
+        id="email"
+        formControlName="email"
+    >
+
+    <span sytle="color: red;" *ngIf="email && email.invalid && email.touched">Invalid</span>
+    <br>
+
+    <label for="password">Password</label>
+    <input 
+        type="password" 
+        placeholder="Password" 
+        name="password" 
+        id="password" 
+        formControlName="password"
+    >
+
+    <span sytle="color: red;" *ngIf="password && password.invalid && password.touched">Invalid</span>
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        padding: 24px 48px;
+        margin: 0 auto;
+        gap: 6px;
+    }
+</style>
